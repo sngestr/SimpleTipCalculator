@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">SimpleTipCalculator</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="tax">Sales Tax</string>
+    <string name="tip_percentage">Tip percentage</string>
+    <string name="split">Split</string>
+    <string name="split_total">Split total</string>
+    <string name="tip">Tip</string>
+    <string name="cost_zero">$0.00</string>
+    <string name="bill_zero">0.00</string>
+    <string name="starting_tip_percentage">15%</string>
+    <string name="starting_split_amt">1</string>
+    <string name="add_sign">+</string>
+    <string name="minus_sign">–</string>
+    <string name="reset">Reset</string>
+</resources>

@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="0dp"
+        android:orientation="vertical"
+        android:weightSum="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/CostLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.1"
+            android:background="@drawable/gradient_color"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/total_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="8"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="@string/cost_zero"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="60sp" />
+
+            <View
+                style="@style/Divider"
+                android:layout_marginLeft="120sp"
+                android:layout_marginRight="120sp"
+                android:background="@color/colorRed" />
+
+            <LinearLayout
+                android:id="@+id/TaxLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingLeft="90dp"
+                android:paddingRight="90dp"
+                android:paddingTop="5dp">
+
+                <TextView
+                    android:id="@+id/tip_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/tip"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorCostRedBrown"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tip_amt_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:maxLength="10"
+                    android:text="@string/cost_zero"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/colorCostRedBrown"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/SplitTotalLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingLeft="90dp"
+                android:paddingRight="90dp"
+                android:paddingTop="5dp">
+
+                <TextView
+                    android:id="@+id/split_total_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/split_total"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorCostRedBrown"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/split_total_amt_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:maxLength="10"
+                    android:text="@string/cost_zero"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/colorCostRedBrown"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/longnosecat_pixel" />
+
+            <Button
+                android:id="@+id/reset_btn"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@android:color/transparent"
+                android:text="@string/reset"
+                android:textColor="@color/colorRed"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/BillLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".90"
+            android:background="@color/colorLightYellow"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:id="@+id/SubtotalLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="7dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="7dp">
+
+                <TextView
+                    android:id="@+id/subtotal_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/subtotal"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorRed"
+                    android:textSize="16sp" />
+
+
+                <EditText
+                    android:id="@+id/subtotal_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:hint="@string/bill_zero"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/colorBillRedBrown"
+                    android:textColorHint="@color/colorBillRedBrown"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/TaxPercentageLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="7dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="7dp">
+
+                <TextView
+                    android:id="@+id/tax_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/tax"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorRed"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/tax_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:hint="@string/bill_zero"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/colorBillRedBrown"
+                    android:textColorHint="@color/colorBillRedBrown"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/Divider"
+                android:layout_marginBottom="5sp"
+                android:layout_marginLeft="120sp"
+                android:layout_marginRight="120sp"
+                android:layout_marginTop="5sp"
+                android:background="@color/colorRed" />
+
+            <TextView
+                android:id="@+id/tip_percentage_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:text="@string/tip_percentage"
+                android:textAllCaps="true"
+                android:textColor="@color/colorRed"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/TipLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/tip_minus_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_button_w_shadow"
+                    android:text="@string/minus_sign"
+                    android:textColor="@color/colorButtonRedBrown"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/tip_add_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_button_w_shadow"
+                    android:text="@string/add_sign"
+                    android:textColor="@color/colorButtonRedBrown"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tip_percentage_amt_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:layout_weight="1"
+                    android:text="@string/starting_tip_percentage"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/colorBillRedBrown"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/split_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:text="@string/split"
+                android:textAllCaps="true"
+                android:textColor="@color/colorRed"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/SplitLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/split_minus_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_button_w_shadow"
+                    android:text="@string/minus_sign"
+                    android:textColor="@color/colorButtonRedBrown"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/split_add_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_button_w_shadow"
+                    android:text="@string/add_sign"
+                    android:textColor="@color/colorButtonRedBrown"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/split_amt_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:layout_weight="1"
+                    android:text="@string/starting_split_amt"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/colorBillRedBrown"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorLightYellow"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-8625474222959230/5668511260" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
