@@ -2,7 +2,7 @@
 <p align="center"><img src="https://user-images.githubusercontent.com/25874129/162667070-be1ef70a-ff4d-4808-90a5-076f35eb10c5.png" alt="promo pic one" width=250; styles="display:'inline-block';"> <img src="https://user-images.githubusercontent.com/25874129/162667078-0eb4113d-ed54-408a-a8e5-ca622d144833.png" alt="promo pic two" width=250; styles="display:'inline-block';"> <img src="https://user-images.githubusercontent.com/25874129/162667082-9c05643e-1541-4044-aab0-b6b8cad8868b.png" alt="promo pic three" width=250; styles="display:'inline-block';"> </p>
 
 ### What is this application about?
-<p align="left">A simple tip calculator build back in 2018 for android practice. This is a tip calculator android application that helps you calculate the total cost based on tip percentage and split.</p>
+<p align="left">A simple tip calculator build back in 2018 for android practice and will be keeping it here for the record. This is a tip calculator that helps you calculate the total cost based on a tip percentage and split evenly among others. </p>
 
 ### Screenshots / Video Gif
 ***
